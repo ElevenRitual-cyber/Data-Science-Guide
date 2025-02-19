@@ -1,6 +1,3 @@
-Here's a description you can use for your GitHub repository:  
-
----
 
 # Data Science Guide 📊 | AI-Powered Insights  
 
