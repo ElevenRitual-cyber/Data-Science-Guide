@@ -79,6 +79,68 @@ NumPy ensures **homogeneity** in arrays through a process called **type upcastin
 3️⃣ **Creating an `ndarray`** 🛠️  
 4️⃣ **Important Attributes of `ndarray`** 📊  
 5️⃣ **Types of NumPy Arrays (1D, 2D, 3D+)** 🔢  
+### **What is an `ndarray` in NumPy?**  
+
+An `ndarray` (N-dimensional array) is the **core data structure** of NumPy. It is a **multi-dimensional, homogeneous array** that allows for efficient storage and manipulation of numerical data.
+
+---
+
+### **✅ Key Features of `ndarray`**
+1. **Multi-dimensional**: Supports 1D, 2D, 3D, or higher-dimensional arrays.  
+2. **Homogeneous**: All elements must be of the **same data type** (e.g., `int`, `float`).  
+3. **Efficient Storage**: Uses a contiguous block of memory, making operations fast.  
+4. **Vectorized Operations**: Supports element-wise computations without loops.  
+5. **Flexible Shape**: Can be **reshaped** and **broadcasted** for operations.
+
+---
+
+### **🚀 Creating an `ndarray`**
+You can create an `ndarray` using `numpy.array()`:
+```python
+import numpy as np
+
+# 1D array
+arr1 = np.array([1, 2, 3, 4])
+
+# 2D array (matrix)
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+
+# 3D array
+arr3 = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+print(arr1)
+print(arr2)
+print(arr3)
+```
+
+---
+
+### **🔹 Important Attributes of `ndarray`**
+| Attribute        | Description | Example |
+|-----------------|-------------|---------|
+| `ndarray.shape` | Returns the shape (dimensions) of the array | `(2,3)` for a 2D array with 2 rows and 3 columns |
+| `ndarray.ndim`  | Returns the number of dimensions | `1D`, `2D`, `3D`, etc. |
+| `ndarray.size`  | Total number of elements | `6` for an array of shape `(2,3)` |
+| `ndarray.dtype` | Data type of elements | `int32`, `float64`, etc. |
+
+Example:
+```python
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+print(arr.shape)  # (2,3)
+print(arr.ndim)   # 2
+print(arr.size)   # 6
+print(arr.dtype)  # int32 (or int64)
+```
+
+---
+### **✅ Why Use `ndarray` Instead of Lists?**
+| Feature          | NumPy `ndarray` | Python List |
+|-----------------|----------------|-------------|
+| Storage        | Contiguous memory block | Stores references (pointers) |
+| Speed          | Much faster due to vectorized operations | Slower, requires loops |
+| Type Safety    | Homogeneous (same data type) | Can hold mixed types |
+| Mathematical Operations | Built-in, optimized operations | Needs explicit loops |
 
 ### 🔹 **Why Does NumPy Do This?**
 - **Performance**: NumPy uses **fixed-size** data types, unlike Python lists, making operations **fast**.  
